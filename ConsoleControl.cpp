@@ -4,9 +4,9 @@ namespace ConCI2F
 void ConsoleControl::GetClientCursorPos(int * x, int * y)
 {
 	POINT point;
-	HWND hwnd = FindWindow(L"ConsoleWindowClass", NULL); // »ñÈ¡»æÍ¼´°¿Ú¾ä±ú
-	GetCursorPos(&point);   // »ñÈ¡Êó±êÖ¸ÕëÎ»ÖÃ£¨ÆÁÄ»×ø±ê£©
-	ScreenToClient(hwnd, &point); // ½«Êó±êÖ¸ÕëÎ»ÖÃ×ª»»Îª´°¿Ú×ø±ê
+	HWND hwnd = FindWindow(L"ConsoleWindowClass", NULL); // è·å–ç»˜å›¾çª—å£å¥æŸ„
+	GetCursorPos(&point);   // è·å–é¼ æ ‡æŒ‡é’ˆä½ç½®ï¼ˆå±å¹•åæ ‡ï¼‰
+	ScreenToClient(hwnd, &point); // å°†é¼ æ ‡æŒ‡é’ˆä½ç½®è½¬æ¢ä¸ºçª—å£åæ ‡
 	*x = point.y/14;
 	*y = point.x/8;
 }
@@ -40,14 +40,14 @@ char ConsoleControl::Getchf(void)
 void ConsoleControl::GetHelp()
 {
     char help[800]= {"SetColor:\n\
-0 = ºÚÉ«       8 = »ÒÉ«\n\
-1 = À¶É«       9 = µ­À¶É«\n\
-2 = ÂÌÉ«       10 = µ­ÂÌÉ«\n\
-3 = Ç³ÂÌÉ«     11 = µ­Ç³ÂÌÉ«\n\
-4 = ºìÉ«       12 = µ­ºìÉ«\n\
-5 = ×ÏÉ«       13 = µ­×ÏÉ«\n\
-6 = »ÆÉ«       14 = µ­»ÆÉ«\n\
-7 = °×É«       15 = ÁÁ°×É«\n\
+0 = é»‘è‰²       8 = ç°è‰²\n\
+1 = è“è‰²       9 = æ·¡è“è‰²\n\
+2 = ç»¿è‰²       10 = æ·¡ç»¿è‰²\n\
+3 = æµ…ç»¿è‰²     11 = æ·¡æµ…ç»¿è‰²\n\
+4 = çº¢è‰²       12 = æ·¡çº¢è‰²\n\
+5 = ç´«è‰²       13 = æ·¡ç´«è‰²\n\
+6 = é»„è‰²       14 = æ·¡é»„è‰²\n\
+7 = ç™½è‰²       15 = äº®ç™½è‰²\n\
 SetGotoxy:\n\
 Set display space to lines,cols\n\
 SetConsoleSize:\n\
