@@ -27,6 +27,7 @@ public:
 	__declspec(dllexport)char Getchf(void);
 	__declspec(dllexport)char Getchif(void);
 	__declspec(dllexport)void ScreenTips(int mode, int time, int BeforeTextColor, int BeforeBackGroundColor);
+	__declspec(dllexport)void GetClientCursorPos(int * x, int * y);
 
 };
 }

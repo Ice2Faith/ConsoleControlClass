@@ -1,7 +1,15 @@
 #include"ConsoleControl.h"
 namespace ConCI2F
 {
-
+void ConsoleControl::GetClientCursorPos(int * x, int * y)
+{
+	POINT point;
+	HWND hwnd = FindWindow(L"ConsoleWindowClass", NULL); // 获取绘图窗口句柄
+	GetCursorPos(&point);   // 获取鼠标指针位置（屏幕坐标）
+	ScreenToClient(hwnd, &point); // 将鼠标指针位置转换为窗口坐标
+	*x = point.y/14;
+	*y = point.x/8;
+}
 char ConsoleControl::Getchif(void)
 {
     if(_kbhit())
