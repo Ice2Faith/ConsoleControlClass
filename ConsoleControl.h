@@ -28,6 +28,10 @@ public:
 	__declspec(dllexport)char Getchif(void);
 	__declspec(dllexport)void ScreenTips(int mode, int time, int BeforeTextColor, int BeforeBackGroundColor);
 	__declspec(dllexport)void GetClientCursorPos(int * x, int * y);
+	__declspec(dllexport)void SetWindowMinMax(int mode);
+	__declspec(dllexport)void ClickKeybd(int key);
+	__declspec(dllexport)void GetKeybdCodeHelp();
+	__declspec(dllexport)int IsKeyDown(int key);
 
 };
 }
