@@ -8,3 +8,6 @@ copy ConsoleControl.h/.lib/.dll files to your object path with your source code.
 # #include "ConsoleControl.h"
 # ConsoleControl vules;
 # vules.functionname();
+
+# update info
+add keyclick checkkeydown function,any key code help function.
